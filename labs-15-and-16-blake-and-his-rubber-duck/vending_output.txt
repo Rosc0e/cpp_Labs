@@ -1,0 +1,12 @@
+Price: $ 1.50
+Money inserted: $ 1.50
+No Change
+********************
+Price: $ 4.00
+Money inserted: $ 5.00
+Change:
+Quarters: 4
+Dimes: 0
+Nickels: 0
+Pennies: 0
+********************
