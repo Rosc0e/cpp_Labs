@@ -57,8 +57,8 @@ bool compile_project(const std::string& dir) {
         }
         unix_cmd += " -o " + dir + "/lab";
         
-        // Windows build command with static linking
-        windows_cmd = "x86_64-w64-mingw32-g++ -std=c++17 -static-libgcc -static-libstdc++";
+        // Windows build command with full static linking
+        windows_cmd = "x86_64-w64-mingw32-g++ -std=c++17 -static";
         for (const auto& file : cpp_files) {
             windows_cmd += " " + file;
         }
@@ -75,8 +75,8 @@ bool compile_project(const std::string& dir) {
         // Unix build command
         unix_cmd = "g++ -std=c++17 " + main_source + " -o " + dir + "/lab";
         
-        // Windows build command with static linking
-        windows_cmd = "x86_64-w64-mingw32-g++ -std=c++17 -static-libgcc -static-libstdc++ " + 
+        // Windows build command with full static linking
+        windows_cmd = "x86_64-w64-mingw32-g++ -std=c++17 -static " + 
                      main_source + " -o " + dir + "/lab.exe";
     }
     
